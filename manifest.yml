@@ -1,0 +1,16 @@
+---
+applications:
+  .:
+    name: millifire
+    framework:
+      name: rails3
+      info:
+        mem: 256M
+        description: Rails Application
+        exec: 
+    url: ${name}.${target-base}
+    mem: 256M
+    instances: 1
+    services:
+      postgresql-5310e:
+        type: postgresql
