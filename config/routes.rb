@@ -4,7 +4,7 @@ Kandan::Application.routes.draw do
   devise_for :users
 
   get '/search' => "main#search"
-  
+
   resources :channels do
     resources :activities
     resources :attachments
@@ -14,6 +14,8 @@ Kandan::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+
+  match 'seed' => 'application#seed'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
